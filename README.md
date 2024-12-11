@@ -49,9 +49,4 @@ We welcome your feedback, suggestions, and collaboration! Let’s enhance this p
 
 ---
 
-## **Contact the Team** 📬  
-For questions, suggestions, or collaboration requests, please contact us via email or through the project instructor, **Danny**.
-
----
-
 **Let’s make Health Connect a game-changer for healthcare professionals!** 💪
