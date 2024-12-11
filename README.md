@@ -18,6 +18,11 @@ Designed specifically for **Doctors**, this app is tailored to improve accessibi
 
 ---
 
+## **Video Presentation** 🎥  
+Check out our [Video Presentation](https://drive.google.com/file/d/11bwDIWzrVjLcXEQx03rNUSiWqyJ8WiyA/view) for a deeper dive into the project.
+
+---
+
 ## **Development Scope** 🛠️
 
 - **Platform**: Android  
