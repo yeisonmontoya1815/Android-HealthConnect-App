@@ -1,0 +1,58 @@
+<resources>
+    <string name="app_name">HealthConnect</string>
+    <string name="app_name_with_spacing">Health Connect</string>
+
+    <string name="patient_picture">Patient picture</string>
+    <string name="appointments_scheduling">Appointment Scheduling</string>
+    <string name="patients_records">Patients Records</string>
+    <string name="patients_history">Patients History</string>
+    <string name="appointment_history">Appointment History</string>
+    <string name="name">Name *</string>
+    <string name="email">Email *</string>
+    <string name="password">Password *</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="edit">Edit</string>
+    <string name="login">Log In</string>
+    <string name="appointment">Appointment</string>
+    <string name="appointment_date">Appointment Date*</string>
+    <string name="appointment_time">Appointment Time*</string>
+    <string name="notes">Notes</string>
+    <string name="appointment_notes">Appointment Notes</string>
+    <string name="medicines">Medicines</string>
+    <string name="exams">Exams</string>
+    <string name="previous_appointment">Previous Appointment</string>
+    <string name="current_appointment">Current Appointment</string>
+    <string name="filter_by_name">Filter by Name</string>
+    <string name="patient_profile">Patient Profile</string>
+    <string name="patient_name_title">Patient Name *</string>
+    <string name="patient_gender_title">Gender *</string>
+    <string name="patient_email_title">Email *</string>
+    <string name="patient_date_of_birth_title">Date of Birth *</string>
+    <string name="patient_phone_number_title">Phone Number *</string>
+    <string name="patient_height_title">Height *</string>
+    <string name="patient_weight_title">Weight *</string>
+    <string name="doctor_picture">Doctor picture</string>
+    <string name="welcome_back">Welcome back</string>
+    <string name="upcoming_appointments">Upcoming Appointments</string>
+    <string name="doctor_profile">Doctor Profile</string>
+    <string name="menu_arrow">Menu Arrow</string>
+    <string name="select_date">Select Date</string>
+    <string name="hint_patient_name">Please insert a name</string>
+    <string name="generating_mock_data">Generating Mock Data</string>
+
+    <string name="cancel_appointment">Cancel\nAppointment</string>
+    <string name="start_appointment">Start\nAppointment</string>
+    <string name="health_connect_two_lines">Health\nConnect</string>
+    <string name="appointments_scheduling_two_lines">Appointment\nScheduling</string>
+    <string name="patients_records_two_lines">Patients\nRecords</string>
+    <string name="appointment_history_two_lines">Appointment\nHistory</string>
+
+    <string name="sun">Sun</string>
+    <string name="mon">Mon</string>
+    <string name="tue">Tue</string>
+    <string name="wed">Wed</string>
+    <string name="thu">Thu</string>
+    <string name="fri">Fri</string>
+    <string name="sat">Sat</string>
+</resources>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    tools:context=".WelcomeActivity">
+
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:contentDescription="@null"
+        android:src="@drawable/welcome_screen_health_connect"
+        android:translationX="-20dp"
+        android:translationY="-10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/welcome_activity_title"
+        android:layout_width="328dp"
+        android:layout_height="64dp"
+        android:fontFamily="@font/aldrich"
+        android:maxLines="2"
+        android:text="@string/app_name"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="42sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.517" />
+
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:id="@+id/welcome_activity_progress"
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+        android:layout_marginTop="64dp"
+        app:indicatorColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/welcome_activity_title"
+        app:trackThickness="5dp"
+        tools:max="100"
+        tools:progress="75" />
+
+    <TextView
+        android:id="@+id/welcome_activity_progress_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="@string/generating_mock_data"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/welcome_activity_progress" />
+</androidx.constraintlayout.widget.ConstraintLayout>

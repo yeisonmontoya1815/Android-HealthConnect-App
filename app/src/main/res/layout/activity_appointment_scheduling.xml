@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".appointmentScheduling.AppointmentSchedulingActivity">
+
+    <include
+        android:id="@+id/appointment_scheduling_activity_status_bar"
+        layout="@layout/status_bar"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/appointment_scheduling_activity_vertical_calendar_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="12dp"
+        android:text="Schedules"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appointment_scheduling_activity_status_bar" />
+
+    <TextView
+        android:id="@+id/appointment_scheduling_activity_vertical_calendar_month_year"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/appointment_scheduling_activity_vertical_calendar_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="Oct, 2024" />
+
+    <include
+        android:id="@+id/appointment_scheduling_activity_vertical_calendar"
+        layout="@layout/vertical_calendar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appointment_scheduling_activity_vertical_calendar_title" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/appointment_scheduling_activity_appointments_list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appointment_scheduling_activity_vertical_calendar" />
+
+    <ImageView
+        android:id="@+id/appointment_scheduling_activity_add_appointment"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_margin="20dp"
+        android:backgroundTint="@color/white"
+        android:contentDescription="@null"
+        android:scaleType="centerCrop"
+        android:src="@drawable/add_icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:tint="@color/pastel_green" />
+</androidx.constraintlayout.widget.ConstraintLayout>

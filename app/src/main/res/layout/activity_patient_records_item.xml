@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingVertical="12dp">
+
+    <ImageView
+        android:id="@+id/activity_patient_records_item_patient_picture"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:background="@drawable/rounded_background_profile_picture"
+        android:contentDescription="@string/patient_picture"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/activity_patient_records_item_patient_info_layout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/default_profile_picture" />
+
+    <LinearLayout
+        android:id="@+id/activity_patient_records_item_patient_info_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/activity_patient_records_item_patient_picture"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/activity_patient_records_item_patient_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            tools:text="Mr. Adam Smith" />
+
+        <TextView
+            android:id="@+id/activity_patient_records_item_patient_gender_age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Male, 72 years-old" />
+
+        <TextView
+            android:id="@+id/activity_patient_records_item_patient_phone_number_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="(604) 555 - 5555 - smith.adam@gmail.com" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

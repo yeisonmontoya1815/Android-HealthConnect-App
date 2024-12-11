@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".currentAppointment.CurrentAppointmentActivity">
+
+    <include
+        android:id="@+id/current_appointment_activity_status_bar"
+        layout="@layout/status_bar"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/current_appointment_activity_patient_info_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/current_appointment_activity_status_bar">
+
+        <ImageView
+            android:id="@+id/current_appointment_activity_appointment_item_image"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="20dp"
+            android:background="@drawable/rounded_background_profile_picture"
+            android:contentDescription="@string/patient_picture"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/current_appointment_activity_appointment_item_info_layout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/default_profile_picture" />
+
+        <LinearLayout
+            android:id="@+id/current_appointment_activity_appointment_item_info_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/current_appointment_activity_appointment_item_appointment_time"
+            app:layout_constraintStart_toEndOf="@id/current_appointment_activity_appointment_item_image"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/current_appointment_activity_appointment_item_patient_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                tools:text="Mr. Adam Smith" />
+
+            <TextView
+                android:id="@+id/current_appointment_activity_appointment_item_patient_age"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="72 years-old" />
+
+            <TextView
+                android:id="@+id/current_appointment_activity_appointment_item_appointment_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Regular consultation" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/current_appointment_activity_appointment_item_appointment_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/date_background"
+            android:backgroundTint="@color/pastel_green"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="8dp"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/current_appointment_activity_appointment_item_info_layout"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="09:30" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/current_appointment_activity_notes_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/notes"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/current_appointment_activity_patient_info_layout" />
+
+    <EditText
+        android:id="@+id/current_appointment_activity_notes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:autofillHints="false"
+        android:gravity="start|bottom"
+        android:inputType="textMultiLine"
+        android:minHeight="128dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/current_appointment_activity_notes_title"
+        tools:ignore="LabelFor"
+        tools:text="Notes" />
+
+    <TextView
+        android:id="@+id/current_appointment_activity_medicines_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/medicines"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/current_appointment_activity_notes" />
+
+    <EditText
+        android:id="@+id/current_appointment_activity_medicines"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:autofillHints="false"
+        android:gravity="start|bottom"
+        android:inputType="textMultiLine"
+        android:minHeight="64dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/current_appointment_activity_medicines_title"
+        tools:ignore="LabelFor"
+        tools:text="Medicines" />
+
+    <TextView
+        android:id="@+id/current_appointment_activity_exams_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/exams"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/current_appointment_activity_medicines" />
+
+    <EditText
+        android:id="@+id/current_appointment_activity_exams"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:autofillHints="false"
+        android:gravity="start|bottom"
+        android:inputType="textMultiLine"
+        android:minHeight="64dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/current_appointment_activity_exams_title"
+        tools:ignore="LabelFor"
+        tools:text="Exams" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/current_appointment_activity_save_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/rounded_button"
+        android:backgroundTint="@color/bondi_blue"
+        android:text="@string/save"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/current_appointment_activity_exams" />
+
+    <TextView
+        android:id="@+id/current_appointment_activity_previous_appointment_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/previous_appointment"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/current_appointment_activity_save_button" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/current_appointment_activity_previous_appointment_info_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/bondi_blue"
+        android:paddingVertical="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/current_appointment_activity_previous_appointment_title">
+
+        <TextView
+            android:id="@+id/current_appointment_activity_previous_appointment_date_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="15/11/2024 - 09:30 am" />
+
+        <TextView
+            android:id="@+id/current_appointment_activity_previous_appointment_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="6dp"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/current_appointment_activity_previous_appointment_date_time"
+            tools:text="Regular appointment" />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="20dp"
+            android:contentDescription="@string/menu_arrow"
+            android:src="@drawable/arrow_right_icon"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

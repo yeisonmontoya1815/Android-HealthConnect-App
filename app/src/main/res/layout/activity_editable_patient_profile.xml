@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".patientProfile.EditablePatientProfileActivity">
+
+    <include
+        android:id="@+id/editable_patient_profile_activity_status_bar"
+        layout="@layout/status_bar"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/editable_patient_profile_activity_patient_picture"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/rounded_background_profile_picture"
+        android:contentDescription="@string/patient_picture"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editable_patient_profile_activity_status_bar"
+        tools:src="@drawable/default_profile_picture" />
+
+    <TextView
+        android:id="@+id/editable_patient_profile_activity_patient_name_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:text="@string/patient_name_title"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@id/editable_patient_profile_activity_patient_gender_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editable_patient_profile_activity_patient_picture" />
+
+    <EditText
+        android:id="@+id/editable_patient_profile_activity_patient_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:autofillHints="false"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@id/editable_patient_profile_activity_patient_name_title"
+        app:layout_constraintStart_toStartOf="@id/editable_patient_profile_activity_patient_name_title"
+        app:layout_constraintTop_toBottomOf="@id/editable_patient_profile_activity_patient_name_title"
+        tools:ignore="LabelFor" />
+
+    <TextView
+        android:id="@+id/editable_patient_profile_activity_patient_gender_title"
+        android:layout_width="128dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:text="@string/patient_gender_title"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editable_patient_profile_activity_patient_picture" />
+
+    <Spinner
+        android:id="@+id/editable_patient_profile_activity_patient_gender"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="6dp"
+        app:layout_constraintBottom_toBottomOf="@id/editable_patient_profile_activity_patient_name"
+        app:layout_constraintEnd_toEndOf="@id/editable_patient_profile_activity_patient_gender_title"
+        app:layout_constraintStart_toStartOf="@id/editable_patient_profile_activity_patient_gender_title"
+        app:layout_constraintTop_toBottomOf="@id/editable_patient_profile_activity_patient_gender_title" />
+
+    <TextView
+        android:id="@+id/editable_patient_profile_activity_patient_email_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/patient_email_title"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editable_patient_profile_activity_patient_name" />
+
+    <EditText
+        android:id="@+id/editable_patient_profile_activity_patient_email"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="6dp"
+        android:autofillHints="false"
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editable_patient_profile_activity_patient_email_title"
+        tools:ignore="LabelFor" />
+
+    <TextView
+        android:id="@+id/editable_patient_profile_activity_patient_date_of_birth_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:text="@string/patient_date_of_birth_title"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@id/editable_patient_profile_activity_patient_Phone_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editable_patient_profile_activity_patient_email" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/editable_patient_profile_activity_patient_date_of_birth"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:background="@drawable/rounded_button"
+        android:text="@string/select_date"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@id/editable_patient_profile_activity_patient_date_of_birth_title"
+        app:layout_constraintStart_toStartOf="@id/editable_patient_profile_activity_patient_date_of_birth_title"
+        app:layout_constraintTop_toBottomOf="@id/editable_patient_profile_activity_patient_date_of_birth_title" />
+
+    <TextView
+        android:id="@+id/editable_patient_profile_activity_patient_Phone_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:text="@string/patient_phone_number_title"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/editable_patient_profile_activity_patient_date_of_birth_title"
+        app:layout_constraintTop_toBottomOf="@id/editable_patient_profile_activity_patient_email" />
+
+    <EditText
+        android:id="@+id/editable_patient_profile_activity_patient_phone_number"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:autofillHints="false"
+        android:inputType="phone"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="@id/editable_patient_profile_activity_patient_date_of_birth"
+        app:layout_constraintEnd_toEndOf="@id/editable_patient_profile_activity_patient_Phone_title"
+        app:layout_constraintStart_toStartOf="@id/editable_patient_profile_activity_patient_Phone_title"
+        app:layout_constraintTop_toBottomOf="@id/editable_patient_profile_activity_patient_Phone_title"
+        tools:ignore="LabelFor"
+        tools:text="+1 (123) 123-1234" />
+
+    <TextView
+        android:id="@+id/editable_patient_profile_activity_patient_height_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:text="@string/patient_height_title"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@id/editable_patient_profile_activity_patient_weight_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editable_patient_profile_activity_patient_date_of_birth" />
+
+    <EditText
+        android:id="@+id/editable_patient_profile_activity_patient_height"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:autofillHints="false"
+        android:inputType="numberDecimal"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="@id/editable_patient_profile_activity_patient_height_title"
+        app:layout_constraintStart_toStartOf="@id/editable_patient_profile_activity_patient_height_title"
+        app:layout_constraintTop_toBottomOf="@id/editable_patient_profile_activity_patient_height_title"
+        tools:ignore="LabelFor"
+        tools:text="12.56" />
+
+    <TextView
+        android:id="@+id/editable_patient_profile_activity_patient_weight_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:text="@string/patient_weight_title"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/editable_patient_profile_activity_patient_height_title"
+        app:layout_constraintTop_toBottomOf="@id/editable_patient_profile_activity_patient_date_of_birth" />
+
+    <EditText
+        android:id="@+id/editable_patient_profile_activity_patient_weight"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:autofillHints="false"
+        android:inputType="numberDecimal"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="@id/editable_patient_profile_activity_patient_weight_title"
+        app:layout_constraintStart_toStartOf="@id/editable_patient_profile_activity_patient_weight_title"
+        app:layout_constraintTop_toBottomOf="@id/editable_patient_profile_activity_patient_weight_title"
+        tools:ignore="LabelFor"
+        tools:text="12.56" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/editable_patient_profile_activity_save_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/rounded_button"
+        android:backgroundTint="@color/bondi_blue"
+        android:text="@string/save"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

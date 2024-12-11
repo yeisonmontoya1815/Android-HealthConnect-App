@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".appointment.AppointmentActivity">
+
+    <include
+        android:id="@+id/appointment_activity_status_bar"
+        layout="@layout/status_bar"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/appointment_activity_patient_name_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/patient_name_title"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appointment_activity_status_bar" />
+
+    <AutoCompleteTextView
+        android:id="@+id/appointment_activity_patient_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="6dp"
+        android:autofillHints="false"
+        android:background="@drawable/rounded_button"
+        android:completionThreshold="1"
+        android:dropDownWidth="match_parent"
+        android:dropDownHeight="wrap_content"
+        android:hint="@string/hint_patient_name"
+        android:inputType="textPersonName"
+        android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appointment_activity_patient_name_title"
+        tools:ignore="LabelFor" />
+
+    <TextView
+        android:id="@+id/appointment_activity_appointment_date_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/appointment_date"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@id/appointment_activity_appointment_time_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appointment_activity_patient_name" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/appointment_activity_appointment_date"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:background="@drawable/rounded_button"
+        android:backgroundTint="@color/white"
+        app:layout_constraintEnd_toEndOf="@id/appointment_activity_appointment_date_title"
+        app:layout_constraintStart_toStartOf="@id/appointment_activity_appointment_date_title"
+        app:layout_constraintTop_toBottomOf="@id/appointment_activity_appointment_date_title"
+        tools:text="2024-12-06" />
+
+    <TextView
+        android:id="@+id/appointment_activity_appointment_time_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/appointment_time"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/appointment_activity_appointment_date_title"
+        app:layout_constraintTop_toBottomOf="@id/appointment_activity_patient_name" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/appointment_activity_appointment_time"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:background="@drawable/rounded_button"
+        android:backgroundTint="@color/white"
+        app:layout_constraintEnd_toEndOf="@id/appointment_activity_appointment_time_title"
+        app:layout_constraintStart_toStartOf="@id/appointment_activity_appointment_time_title"
+        app:layout_constraintTop_toBottomOf="@id/appointment_activity_appointment_time_title"
+        tools:text="09:45 am" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginVertical="20dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@id/appointment_activity_save_cancel_buttons"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appointment_activity_appointment_date">
+
+        <ImageView
+            android:id="@+id/appointment_activity_cancel_appointment"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_marginEnd="20dp"
+            android:contentDescription="@string/cancel_appointment"
+            android:src="@drawable/cancel_appointment"
+            android:text="@string/cancel_appointment" />
+
+        <ImageView
+            android:id="@+id/appointment_activity_start_appointment"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:contentDescription="@string/start_appointment"
+            android:src="@drawable/start_appointment"
+            android:text="@string/start_appointment" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/appointment_activity_save_cancel_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginBottom="20dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/appointment_activity_cancel_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_button"
+            android:backgroundTint="@color/black"
+            android:paddingHorizontal="10dp"
+            android:text="@string/cancel"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/appointment_activity_save_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_button"
+            android:backgroundTint="@color/bondi_blue"
+            android:text="@string/save"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
